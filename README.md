@@ -5,6 +5,8 @@
 [![ghit.me](https://ghit.me/badge.svg?repo=almir/docker-webhook)](https://ghit.me/repo/almir/docker-webhook)
 
 ## Running webhook in Docker
+(all the credits to almir, I only make it arm compatible as I need it on an rpi)
+
 The simplest usage of [almir/webhook](https://hub.docker.com/r/almir/webhook/) image is for one to host the hooks JSON file on their machine and mount the directory in which those are kept as a volume to the Docker container:
 ```shell
 docker run -d -p 9000:9000 -v /dir/to/hooks/on/host:/etc/webhook --name=webhook \
