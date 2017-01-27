@@ -1,8 +1,9 @@
 # Dockerfile for https://github.com/adnanh/webhook
+# Credit: Almir Dzinovic <almirdzin@gmail.com>
 
-FROM        alpine
+FROM        container4armhf/armhf-alpine
 
-MAINTAINER  Almir Dzinovic <almirdzin@gmail.com>
+MAINTAINER  Zsolt Balog <zsolt.balog@gmail.com>
 
 ENV         GOPATH /go
 ENV         SRCPATH ${GOPATH}/src/github.com/adnanh
