@@ -12,7 +12,7 @@ WORKDIR     /
 
 #RUN         apt-get update
 #RUN         apt-get install curl git libc-dev gcc libgcc1
-RUN            curl -L -o /tmp/webhook-${WEBHOOK_VERSION}.tar.gz https://github.com/adnanh/webhook/archive/${WEBHOOK_VERSION}.tar.gz
+RUN            curl -f -L -o /tmp/webhook-${WEBHOOK_VERSION}.tar.gz https://github.com/adnanh/webhook/archive/${WEBHOOK_VERSION}.tar.gz
 RUN            mkdir -p ${SRCPATH} && tar -xvzf /tmp/webhook-${WEBHOOK_VERSION}.tar.gz -C ${SRCPATH}
 RUN            mv -f ${SRCPATH}/webhook-* ${SRCPATH}/webhook
 RUN            cd ${SRCPATH}/webhook && go get -d && go build -o /usr/local/bin/webhook
