@@ -5,6 +5,7 @@ FROM        resin/raspberrypi-golang:1.6
 
 MAINTAINER  Zsolt Balog <zsolt.balog@gmail.com>
 
+ENV         HOME /
 ENV         GOPATH /go
 ENV         SRCPATH ${GOPATH}/src/github.com/adnanh
 ENV         WEBHOOK_VERSION 2.6.0
